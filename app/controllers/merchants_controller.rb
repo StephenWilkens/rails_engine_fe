@@ -1,6 +1,10 @@
 class MerchantsController < ApplicationController
   def index
-    require "pry"; binding.pry
-    #MerchantsFacade.get_merchants(params)
+    @merchants = MerchantsFacade.return_merchants
+  end
+
+  def show
+    @merchant = MerchantsFacade.find_merchant(params[:id])
+    
   end
 end

@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  get '/merchants', to: 'merchants#index'
+  resources :merchants, only: [:index, :show]
 end
